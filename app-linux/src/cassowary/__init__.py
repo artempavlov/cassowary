@@ -112,7 +112,7 @@ def main():
                                 cassowary -c path-map -- /home/user/document/personal.docx
     """
     BASE_RDP_CMD = '{rdc} /sec:tls /d:"{domain}" /u:"{user}" /p:"{passd}" /v:{ip} +clipboard /a:drive,root,{share_root} ' \
-                   '+decorations /cert-ignore /sound /scale:{scale} /dynamic-resolution /{mflag} {rdflag} ' \
+                   '+decorations /cert:ignore /sound /scale:{scale} /dynamic-resolution /{mflag} {rdflag} ' \
                    '/wm-class:"{wmclass}" ' \
                    '/app:"{execu}" /app-icon:"{icon}" '
     parser = argparse.ArgumentParser(description=about, formatter_class=argparse.RawDescriptionHelpFormatter)
