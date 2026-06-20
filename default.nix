@@ -2,7 +2,6 @@
   lib,
   python3Packages,
   qt5,
-  libsForQt5,
   killall,
   freerdp,
   version ? "git",
@@ -30,10 +29,10 @@ with python3Packages; buildPythonApplication rec {
   propagatedBuildInputs = [
     pyqt5
     libvirt
-    libsForQt5.qt5.qtwayland
+    qt5.qtwayland
   ] ++ [
-    pkgs.killall
-    pkgs.freerdp
+    killall
+    freerdp
   ];
 
   dontWrapQtApps = true;
